@@ -1,1 +1,15 @@
 //Schema for Netty Chat Server
+namespace Schema;
+
+union Data {CredentialToken}
+
+
+table CredentialToken {
+  token:string (required);
+}
+
+table Message {
+  data:Data;
+}
+
+root_type Message;
