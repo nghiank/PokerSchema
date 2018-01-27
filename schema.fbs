@@ -1,7 +1,13 @@
 //Schema for Netty Chat Server
 namespace schema;
 
-union Data {CredentialToken, ReconnectKey}
+union Data {CredentialToken, ReconnectKey, GameCommand}
+
+enum Command : byte { JoinRoom = 1, QuitRoom }
+
+table GameCommand {
+  type: Command; 
+}
 
 table ReconnectKey {
   key:string (required);
