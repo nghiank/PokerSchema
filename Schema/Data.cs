@@ -10,7 +10,7 @@ public enum Data : byte
  NONE = 0,
  CredentialToken = 1,
  ReconnectKey = 2,
- GameCommand = 3,
+ JoinRoomCommand = 3,
 };
 
 

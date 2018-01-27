@@ -7,9 +7,9 @@ public final class Data {
   public static final byte NONE = 0;
   public static final byte CredentialToken = 1;
   public static final byte ReconnectKey = 2;
-  public static final byte GameCommand = 3;
+  public static final byte JoinRoomCommand = 3;
 
-  public static final String[] names = { "NONE", "CredentialToken", "ReconnectKey", "GameCommand", };
+  public static final String[] names = { "NONE", "CredentialToken", "ReconnectKey", "JoinRoomCommand", };
 
   public static String name(int e) { return names[e]; }
 }
