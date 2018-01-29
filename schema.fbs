@@ -3,6 +3,16 @@ namespace schema;
 
 union Data {CredentialToken, ReconnectKey, JoinRoomCommand}
 
+table PlayerInSession {
+  name: string;
+  amount: int32;
+}
+
+table Room {
+	name:string;
+	players:[PlayerInSession];		
+}
+
 table JoinRoomCommand {
   token:string (required);
   roomId:string;
