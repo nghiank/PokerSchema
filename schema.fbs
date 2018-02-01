@@ -4,6 +4,7 @@ namespace schema;
 union Data {CredentialToken, ReconnectKey, JoinRoomCommand, PlayerInfo}
 
 table PlayerInfo {
+  userId: string;
   name: string;
 }
 
