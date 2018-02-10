@@ -8,11 +8,9 @@ namespace schema
 public enum Data : byte
 {
  NONE = 0,
- CredentialToken = 1,
- ReconnectKey = 2,
- JoinRoomCommand = 3,
- PlayerInfo = 4,
- RoomInfo = 5,
+ JoinRoomCommand = 1,
+ RoomInfo = 2,
+ PlayerUpdate = 3,
 };
 
 
