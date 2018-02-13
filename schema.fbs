@@ -1,7 +1,7 @@
 //Schema for Netty Chat Server
 namespace schema;
 
-union Data {JoinRoomCommand, RoomInfo, PlayerUpdate}
+union Data {JoinRoomCommand, RoomInfo, PlayerUpdate, ErrorMessage}
 enum PlayerStatus : byte { Unknown = 0, Arrive, Left}
 
 table PlayerInfo {
@@ -21,6 +21,10 @@ table PlayerUpdate {
 table JoinRoomCommand {
   token:string (required);
   roomId:string;
+}
+
+table ErrorMessage {
+  error:string (required);
 }
 
 table Message {
