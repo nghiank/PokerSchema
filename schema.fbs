@@ -3,6 +3,7 @@ namespace schema;
 
 union Data {JoinRoomCommand, RoomInfo, PlayerUpdate, ErrorMessage}
 enum PlayerStatus : byte { Unknown = 0, Arrive, Left}
+enum ErrorCode : byte { Unknown = 0, INVALID_AUTH}
 
 table PlayerInfo {
   userId: string;
@@ -24,6 +25,7 @@ table JoinRoomCommand {
 }
 
 table ErrorMessage {
+  code:ErrorCode;
   error:string (required);
 }
 
