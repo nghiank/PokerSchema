@@ -9,6 +9,7 @@ public enum ErrorCode : sbyte
 {
  Unknown = 0,
  INVALID_AUTH = 1,
+ ROOM_NOT_FOUND = 2,
 };
 
 
